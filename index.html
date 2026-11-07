@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevFox | Web, Mobile and Custom Software Development</title>
+  <meta name="description" content="DevFox is a software company in Punjab, Pakistan. We design and build websites, mobile apps and custom software for businesses worldwide." />
+  <meta name="theme-color" content="#4B4FEA" />
+  <link rel="icon" type="image/png" href="/images/df-mark.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Icon sprite (LinkedIn, WhatsApp, Instagram from Simple Icons, CC0) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ═════════════ HEADER ═════════════ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="DevFox home">
+        <img src="/images/df-logo.png" alt="" width="36" height="30" />
+        <span class="brand-name">DevFox</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#stack">Technology</a>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#contact" class="nav-cta">Get a quote</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═════════════ HERO ═════════════ -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Software that helps your business run better.</h1>
+          <p class="lead">DevFox designs and builds websites, mobile apps and custom software for companies in Pakistan and around the world.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Start a project</a>
+            <a href="#work" class="btn btn-ghost">See our work</a>
+          </div>
+          <dl class="hero-facts">
+            <div><dt>Based in</dt><dd>Punjab, Pakistan</dd></div>
+            <div><dt>We reply within</dt><dd>24 hours</dd></div>
+            <div><dt>NDA</dt><dd>Signed on request</dd></div>
+          </dl>
+        </div>
+
+        <aside class="hero-visual" aria-label="DevFox logo">
+          <img class="hero-mark" src="images/df-logo.svg" alt="" width="359" height="302" />
+          <p class="hero-badge"><span class="dot" aria-hidden="true"></span>Open for new projects</p>
+          <p class="hero-caption">Engineers and designers working side by side with you, from the first sketch to launch day.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ═════════════ SERVICES ═════════════ -->
+    <section id="services" class="section">
+      <div class="container split">
+        <div class="split-head">
+          <h2>What we build</h2>
+          <p>Design, development and hosting under one roof, so you deal with one team from start to finish.</p>
+          <a href="#contact" class="text-link">Talk to us about your idea</a>
+        </div>
+
+        <ul class="service-list">
+          <li class="service">
+            <div class="service-name">
+              <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+              <h3>Web development</h3>
+            </div>
+            <p>Fast, secure websites and web applications that grow with your business, built on modern, well-supported technology.</p>
+          </li>
+          <li class="service">
+            <div class="service-name">
+              <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span>
+              <h3>Mobile apps</h3>
+            </div>
+            <p>iOS and Android apps from a single codebase, designed to feel natural on every phone your customers use.</p>
+          </li>
+          <li class="service">
+            <div class="service-name">
+              <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></span>
+              <h3>UI/UX design</h3>
+            </div>
+            <p>Interfaces that are clear to use and easy on the eye, shaped by how your customers actually behave.</p>
+          </li>
+          <li class="service">
+            <div class="service-name">
+              <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></span>
+              <h3>Cloud and DevOps</h3>
+            </div>
+            <p>Reliable hosting, automated deployments and monitoring, so your product stays online and updates ship safely.</p>
+          </li>
+          <li class="service">
+            <div class="service-name">
+              <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></span>
+              <h3>AI and automation</h3>
+            </div>
+            <p>Chatbots, recommendation features and workflow automation that take repetitive work off your team.</p>
+          </li>
+          <li class="service">
+            <div class="service-name">
+              <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span>
+              <h3>Custom software</h3>
+            </div>
+            <p>ERP, CRM and internal tools built around the way your company really works, not the other way round.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═════════════ WORK ═════════════ -->
+    <!-- NOTE: these four projects are sample entries. Replace them with your real projects. -->
+    <section id="work" class="section section-paper">
+      <div class="container">
+        <div class="section-head">
+          <h2>Selected work</h2>
+          <p>The kinds of products we build, across finance, healthcare, education and logistics.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project">
+            <div class="project-visual tone-blue">
+              <span class="project-sector">Finance</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
+            </div>
+            <h3>POS Application</h3>
+            <p>Point of Sale for Business, real-time Dashboard,Inventory transactions and spending insights.</p>
+            <p class="project-stack">React, Node.js, SQL, AWS</p>
+          </article>
+
+          <article class="project">
+            <div class="project-visual tone-teal">
+              <span class="project-sector">Healthcare</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3>MediCare patient portal</h3>
+            <p>Patient records, appointment booking and video consultations in one secure system.</p>
+            <p class="project-stack">Next.js, Python, MongoDB, GCP</p>
+          </article>
+
+          <article class="project">
+            <div class="project-visual tone-violet">
+              <span class="project-sector">Education</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3>LearnSphere platform</h3>
+            <p>An e-learning platform with adaptive lessons, live classes and progress tracking.</p>
+            <p class="project-stack">React, Django, Redis, Azure</p>
+          </article>
+
+          <article class="project">
+            <div class="project-visual tone-slate">
+              <span class="project-sector">Logistics</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3>LogiTrack fleet management</h3>
+            <p>Live vehicle tracking, route planning and delivery reports for dispatch teams.</p>
+            <p class="project-stack">Vue.js, Go, Kafka, Docker</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ TECHNOLOGY ═════════════ -->
+    <section id="stack" class="section">
+      <div class="container split">
+        <div class="split-head">
+          <h2>Technology we work with</h2>
+          <p>We choose tools based on your project, your team and your budget, not on what is fashionable.</p>
+        </div>
+
+        <dl class="stack-grid">
+          <div>
+            <dt>Frontend</dt>
+            <dd>React, Vue.js, Next.js, Angular, TypeScript</dd>
+          </div>
+          <div>
+            <dt>Backend</dt>
+            <dd>Node.js, Python, Go, Java, PHP</dd>
+          </div>
+          <div>
+            <dt>Mobile</dt>
+            <dd>React Native, Flutter, Swift, Kotlin</dd>
+          </div>
+          <div>
+            <dt>Cloud and DevOps</dt>
+            <dd>AWS, Google Cloud, Azure, Docker, Kubernetes</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ═════════════ ABOUT ═════════════ -->
+    <section id="about" class="section section-paper">
+      <div class="container about-grid">
+        <div class="about-text">
+          <h2>A small team that stays close to your project.</h2>
+          <p>DevFox is a software company based in Punjab, Pakistan, founded in 2026. We are engineers and designers who work directly with the people we build for, and we turn complicated problems into software that is simple to use.</p>
+          <p>Our rule is straightforward: every line of code should have a purpose, and every design decision should make the product easier to use.</p>
+          <a href="#contact" class="btn btn-primary">Start a project</a>
+        </div>
+
+        <dl class="commitments">
+          <div>
+            <dt>Regular, visible progress</dt>
+            <dd>We work in two-week sprints and show you a working version at the end of each one.</dd>
+          </div>
+          <div>
+            <dt>Your ideas stay private</dt>
+            <dd>We are happy to sign an NDA before you share any details of your project.</dd>
+          </div>
+          <div>
+            <dt>Support after launch</dt>
+            <dd>We stay on after go-live to fix issues and keep your system running smoothly.</dd>
+          </div>
+          <div>
+            <dt>Honest timelines</dt>
+            <dd>We agree realistic dates up front, and tell you early if anything changes.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ═════════════ TEAM ═════════════ -->
+    <section id="team" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>The people behind DevFox</h2>
+          <p>You will speak to the founders directly, from your first message to the final handover.</p>
+        </div>
+
+        <div class="team-grid">
+          <article class="member">
+            <img class="member-photo" src="images/mypic.jpg" alt="SM Assam, Founder and CEO of DevFox" width="976" height="872" loading="lazy" />
+            <div class="member-body">
+              <h3>SM Assam</h3>
+              <p class="member-role">Founder and CEO</p>
+              <p>Leads strategy and client relationships, and makes sure every project is scoped clearly and delivered on the agreed plan.</p>
+              <ul class="socials" aria-label="SM Assam on social media">
+                <li><a href="https://www.linkedin.com/in/ASSAM-PROFILE" target="_blank" rel="noopener noreferrer" aria-label="SM Assam on LinkedIn"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+                <li><a href="https://wa.me/92XXXXXXXXXX" target="_blank" rel="noopener noreferrer" aria-label="Message SM Assam on WhatsApp"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></a></li>
+                <li><a href="https://www.instagram.com/ASSAM-HANDLE" target="_blank" rel="noopener noreferrer" aria-label="SM Assam on Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="member">
+            <img class="member-photo" src="images/izrar.jpeg" alt="Izrar Shahzad, Co-founder and CEO of DevFox" width="1064" height="1052" loading="lazy" />
+            <div class="member-body">
+              <h3>Izrar Shahzad</h3>
+              <p class="member-role">Co-Founder</p>
+              <p>Full-stack architect focused on distributed systems and cloud-native design, responsible for how your product is built and scaled.</p>
+              <ul class="socials" aria-label="Izrar Shahzad on social media">
+                <li><a href="https://www.linkedin.com/in/IZRAR-PROFILE" target="_blank" rel="noopener noreferrer" aria-label="Izrar Shahzad on LinkedIn"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+                <li><a href="https://wa.me/92XXXXXXXXXX" target="_blank" rel="noopener noreferrer" aria-label="Message Izrar Shahzad on WhatsApp"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></a></li>
+                <li><a href="https://www.instagram.com/IZRAR-HANDLE" target="_blank" rel="noopener noreferrer" aria-label="Izrar Shahzad on Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ CONTACT ═════════════ -->
+    <section id="contact" class="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2>Tell us what you are building.</h2>
+          <p class="contact-lead">Share a few details and we will reply within 24 hours with questions, ideas and a rough idea of cost and timeline.</p>
+
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">Email</span>
+              <a href="mailto:pinfo4891@gmail.com">pinfo4891@gmail.com</a>
+            </li>
+            <li>
+              <span class="contact-label">Phone and WhatsApp</span>
+              <a href="tel:+923167519007">+92 316 7519007</a>
+              <a href="tel:+923419171351">+92 341 9171351</a>
+            </li>
+            <li>
+              <span class="contact-label">Location</span>
+              <span>Gujranwala,Punjab, Pakistan</span>
+            </li>
+          </ul>
+
+          <ul class="socials socials-light" aria-label="DevFox on social media">
+            <li><a href="https://www.linkedin.com/company/YOUR-COMPANY-PAGE" target="_blank" rel="noopener noreferrer" aria-label="DevFox on LinkedIn"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+            <li><a href="https://wa.me/92XXXXXXXXXX" target="_blank" rel="noopener noreferrer" aria-label="Message DevFox on WhatsApp"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></a></li>
+            <li><a href="https://www.instagram.com/YOUR-COMPANY-HANDLE" target="_blank" rel="noopener noreferrer" aria-label="DevFox on Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+          </ul>
+        </div>
+
+        <!-- Field names (from_name, from_email, ...) are the variables used in the EmailJS template -->
+        <form class="form" id="contactForm" autocomplete="on">
+          <div class="form-row">
+            <div class="field">
+              <label for="from_name">Your name</label>
+              <input type="text" id="from_name" name="from_name" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="from_email">Email address</label>
+              <input type="email" id="from_email" name="from_email" autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="company">Company <span class="optional">(optional)</span></label>
+              <input type="text" id="company" name="company" autocomplete="organization" />
+            </div>
+            <div class="field">
+              <label for="project_type">Service needed</label>
+              <select id="project_type" name="project_type">
+                <option value="Not specified">Select a service</option>
+                <option>Web development</option>
+                <option>Mobile app</option>
+                <option>UI/UX design</option>
+                <option>Cloud and DevOps</option>
+                <option>AI and automation</option>
+                <option>Custom software</option>
+                <option>Something else</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="budget">Budget range</label>
+            <select id="budget" name="budget">
+              <option value="Not specified">Select a budget range</option>
+              <option>Under $5k</option>
+              <option>$5k to $15k</option>
+              <option>$15k to $50k</option>
+              <option>$50k and above</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">About your project</label>
+            <textarea id="message" name="message" rows="5" placeholder="What are you building, who is it for, and when do you need it?" required></textarea>
+          </div>
+
+          <!-- Spam trap: real visitors never see or fill this in -->
+          <div class="hp" aria-hidden="true">
+            <label for="website">Leave this field empty</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+            <span class="btn-label">Send message</span>
+          </button>
+
+          <p class="form-status" id="formStatus" role="status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═════════════ FOOTER ═════════════ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand brand-light" aria-label="DevFox home">
+          <img src="/images/df-logo.png" alt="" width="36" height="30" />
+          <span class="brand-name">DevFox</span>
+        </a>
+        <p>A software company in Punjab, Pakistan, building web, mobile and custom software for clients worldwide.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Services">
+        <h4>Services</h4>
+        <a href="#services">Web development</a>
+        <a href="#services">Mobile apps</a>
+        <a href="#services">UI/UX design</a>
+        <a href="#services">Cloud and DevOps</a>
+        <a href="#services">AI and automation</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Company">
+        <h4>Company</h4>
+        <a href="#about">About us</a>
+        <a href="#team">Our team</a>
+        <a href="#work">Selected work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer-col">
+        <h4>Follow us</h4>
+        <ul class="socials socials-light" aria-label="DevFox on social media">
+          <li><a href="https://www.linkedin.com/company/YOUR-COMPANY-PAGE" target="_blank" rel="noopener noreferrer" aria-label="DevFox on LinkedIn"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+          <li><a href="https://wa.me/92XXXXXXXXXX" target="_blank" rel="noopener noreferrer" aria-label="Message DevFox on WhatsApp"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></a></li>
+          <li><a href="https://www.instagram.com/YOUR-COMPANY-HANDLE" target="_blank" rel="noopener noreferrer" aria-label="DevFox on Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> DevFox. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- EmailJS browser SDK (pinned version) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
